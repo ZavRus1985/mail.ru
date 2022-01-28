@@ -11,8 +11,11 @@ public class Main {
         //  }
         String a = data[1];
         String[] data1 = a.split("&");
-        for (String word : data1)
-            System.out.print(word.substring(7) + " ");
+        for (String word : data1){
+            int b = word.indexOf("=");
+            String s = word.substring(b + 1);
+            System.out.print(s + " ");
+        }
 
     }
 }
